@@ -1,5 +1,7 @@
 # Anki 当前交接（2026-10-29 核查）
 
+公开源码仓库：`https://github.com/Geckoyoco/For-Anki`。仪表盘、Contanki 源码及其按钮图片/手柄示意图已上传；个人 `user_files`、Anki 集合、卡片媒体和迁移包未上传。旧迁移脚本仅作为历史参考，不可直接运行。
+
 ## 范围与来源
 
 旧交接见 `/Users/gecko/Documents/ChatGPT/Engineer/任务交接.md`（2026-10-06），本文件只记录此后已核对的增量和关键约束。原文中的历史计数、旧迁移包和未验收项仍需按时间解读。当前 Anki 实际版本由应用命令返回 `26.09.2`。

@@ -1,0 +1,131 @@
+#outer {
+  padding: 8px 0 10px;
+  border-top: 1px solid #e1e6ed !important;
+  background: rgba(255, 255, 255, 0.96);
+}
+
+#middle table {
+  margin: 0 auto;
+  border-spacing: 6px 0;
+}
+
+#middle td[align="center"] {
+  padding-top: 13px;
+}
+
+#middle button {
+  min-width: 94px;
+  height: 38px;
+  margin: 4px 1px !important;
+  padding: 0 14px;
+  border: 1px solid #d8dee8;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(23, 32, 51, 0.07);
+  color: #172033;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  transition:
+    border-color 120ms ease,
+    box-shadow 120ms ease,
+    transform 120ms ease;
+}
+
+#middle button:hover {
+  box-shadow: 0 4px 10px rgba(23, 32, 51, 0.13);
+  transform: translateY(-1px);
+}
+
+#middle button:active {
+  box-shadow: 0 1px 3px rgba(23, 32, 51, 0.12);
+  transform: translateY(0);
+}
+
+#middle button[data-ease="1"] {
+  border-color: #efb7b7;
+  background: #fff1f1;
+  color: #b83232;
+}
+
+#middle button[data-ease="2"] {
+  border-color: #f0cf9e;
+  background: #fff7e9;
+  color: #a45a08;
+}
+
+#middle button[data-ease="3"] {
+  border-color: #a9d8c1;
+  background: #edf9f3;
+  color: #16744a;
+}
+
+#middle button[data-ease="4"] {
+  border-color: #b8d0f8;
+  background: #eff5ff;
+  color: #245fc1;
+}
+
+#middle button[data-ease="1"]:focus-visible {
+  outline: 2px solid #d95757;
+  outline-offset: 2px;
+}
+
+#middle button[data-ease="2"]:focus-visible {
+  outline: 2px solid #d8892f;
+  outline-offset: 2px;
+}
+
+#middle button[data-ease="3"]:focus-visible {
+  outline: 2px solid #2f9b69;
+  outline-offset: 2px;
+}
+
+#middle button[data-ease="4"]:focus-visible {
+  outline: 2px solid #4f83dc;
+  outline-offset: 2px;
+}
+
+#middle .nobold,
+#middle .stattxt {
+  top: -1px;
+  color: #667085;
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+
+#ansbut {
+  min-width: 138px !important;
+  border-color: #bfd1f3 !important;
+  background: #edf3ff !important;
+  color: #2f65bd !important;
+}
+
+#ansbut:hover {
+  border-color: #9bb9ec !important;
+  background: #e4edff !important;
+}
+
+.night-mode #outer,
+.nightMode #outer {
+  border-top-color: #3d4654 !important;
+  background: rgba(37, 42, 50, 0.97);
+}
+
+.night-mode #middle button,
+.nightMode #middle button {
+  box-shadow: none;
+}
+
+@media (max-width: 620px) {
+  #middle table {
+    border-spacing: 4px 0;
+  }
+
+  #middle button {
+    min-width: 84px;
+    height: 42px;
+    padding: 0 10px;
+    font-size: 14px;
+  }
+}

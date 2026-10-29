@@ -1,0 +1,294 @@
+:root {
+  --ielts-blue: #2f6fed;
+  --ielts-blue-soft: #edf3ff;
+  --ielts-green: #198754;
+  --ielts-green-soft: #eaf7f0;
+  --ielts-amber: #b76a13;
+  --ielts-amber-soft: #fff4e5;
+  --ielts-ink: #172033;
+  --ielts-muted: #6b7280;
+  --ielts-line: #e5e9f0;
+  --ielts-surface: #ffffff;
+  --mckinsey-blue-dark: #003A70;
+}
+
+body.ielts-dashboard-home {
+  margin: 0 !important;
+  background: #f4f6f9 !important;
+  color: var(--ielts-ink);
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", sans-serif;
+}
+
+.ielts-dashboard-home > center {
+  display: flex;
+  width: min(900px, calc(100vw - 48px));
+  margin: 0 auto;
+  padding: 30px 0 42px;
+  align-items: stretch;
+  flex-direction: column;
+  text-align: left;
+}
+
+.ielts-dashboard {
+  margin-bottom: 16px;
+}
+
+.ielts-dashboard__heading {
+  display: flex;
+  margin-bottom: 14px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ielts-dashboard h1 {
+  margin: 0;
+  color: var(--mckinsey-blue-dark);
+  font-size: 24px;
+  font-weight: 720;
+  letter-spacing: 0;
+}
+
+.ielts-time-block {
+  display: flex;
+  min-width: 178px;
+  padding: 10px 16px;
+  border: 1px solid var(--ielts-line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.68);
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.ielts-time-block__date {
+  color: var(--ielts-muted);
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.ielts-time-block__time {
+  color: var(--ielts-ink);
+  font-size: 16px;
+  font-weight: 720;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.ielts-dashboard__metrics {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+}
+
+
+.ielts-metric {
+  display: flex;
+  min-height: 60px;
+  padding: 12px 15px;
+  border: 1px solid var(--ielts-line);
+  border-radius: 8px;
+  background: var(--ielts-surface);
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ielts-metric__label {
+  margin-bottom: 5px;
+  color: var(--ielts-muted);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.ielts-metric__value {
+  color: var(--ielts-ink);
+  font-size: 18px;
+  font-weight: 720;
+  font-variant-numeric: tabular-nums;
+}
+
+.ielts-metric--done {
+  background: var(--ielts-green-soft);
+  border-color: #cce8d9;
+}
+
+.ielts-metric[data-action="open-today"] {
+  cursor: pointer;
+  transition:
+    border-color 120ms ease,
+    box-shadow 120ms ease,
+    transform 120ms ease;
+}
+
+.ielts-metric[data-action="open-today"]:hover {
+  border-color: #8fc9aa;
+  box-shadow: 0 3px 10px rgba(25, 135, 84, 0.12);
+  transform: translateY(-1px);
+}
+
+.ielts-metric[data-action="open-today"]:focus-visible {
+  outline: 2px solid var(--ielts-green);
+  outline-offset: 2px;
+}
+
+.ielts-metric--time {
+  background: var(--ielts-amber-soft);
+  border-color: #f0dec4;
+}
+
+.ielts-metric--new {
+  background: var(--ielts-blue-soft);
+  border-color: #d6e3ff;
+}
+
+.ielts-metric--review {
+  background: #fff1f5;
+  border-color: #f8cddd;
+}
+
+.ielts-metric--added {
+  background: var(--ielts-surface);
+  border-color: var(--ielts-line);
+}
+
+.ielts-metric[data-action="open-today-added"] {
+  cursor: pointer;
+  transition:
+    border-color 120ms ease,
+    box-shadow 120ms ease,
+    transform 120ms ease;
+}
+
+.ielts-metric[data-action="open-today-added"]:hover {
+  border-color: #8bd1c9;
+  box-shadow: 0 3px 10px rgba(15, 139, 141, 0.12);
+  transform: translateY(-1px);
+}
+
+.ielts-metric[data-action="open-today-added"]:focus-visible {
+  outline: 2px solid #0f8b8d;
+  outline-offset: 2px;
+}
+
+.ielts-deck-table {
+  width: 100% !important;
+  padding: 10px 12px 12px !important;
+  border: 1px solid var(--ielts-line) !important;
+  border-spacing: 0 5px !important;
+  border-radius: 8px !important;
+  background: var(--ielts-surface) !important;
+  box-shadow: 0 1px 2px rgba(23, 32, 51, 0.04) !important;
+  box-sizing: border-box;
+}
+
+.ielts-deck-table th {
+  height: 32px;
+  padding: 0 12px 7px !important;
+  border-bottom: 1px solid var(--ielts-line) !important;
+  color: var(--ielts-muted);
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: 0;
+}
+
+.ielts-deck-table tr.deck td {
+  height: 36px;
+  padding: 4px 12px !important;
+  border: 0 !important;
+  background: #fafbfc;
+  font-size: 14px;
+  transition:
+    background 120ms ease,
+    color 120ms ease;
+}
+
+.ielts-deck-table tr.deck td:first-child {
+  border-radius: 6px 0 0 6px;
+}
+
+.ielts-deck-table tr.deck td:last-child {
+  border-radius: 0 6px 6px 0;
+}
+
+.ielts-deck-table tr.deck:hover td {
+  background: #f0f4fa !important;
+}
+
+.ielts-deck-table tr.current td {
+  background: #eaf1ff !important;
+}
+
+.ielts-deck-table tr.ielts-primary-deck a.deck {
+  font-weight: 700;
+}
+
+.ielts-deck-table a.deck {
+  color: var(--ielts-ink);
+  font-weight: 700;
+  text-decoration: none !important;
+}
+
+.ielts-deck-table .new-count {
+  color: var(--ielts-blue) !important;
+}
+
+.ielts-deck-table .learn-count {
+  color: var(--ielts-amber) !important;
+}
+
+.ielts-deck-table .review-count {
+  color: var(--ielts-green) !important;
+}
+
+.ielts-deck-table .tomorrow-count {
+  color: #7357b8 !important;
+}
+
+.ielts-deck-table .tomorrow-header {
+  white-space: nowrap;
+}
+
+
+.ielts-deck-table .count {
+  min-width: 62px;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+}
+
+.ielts-deck-table .gears {
+  opacity: 0.42;
+}
+
+.ielts-original-stats {
+  display: none;
+}
+
+.night-mode body.ielts-dashboard-home,
+body.ielts-dashboard-home.nightMode {
+  --ielts-blue: #8bb3ff;
+  --ielts-blue-soft: #24334d;
+  --ielts-green: #66c894;
+  --ielts-green-soft: #203a2c;
+  --ielts-amber: #e6aa63;
+  --ielts-amber-soft: #403122;
+  --ielts-ink: #f2f4f8;
+  --ielts-muted: #a8b0be;
+  --ielts-line: #3d4654;
+  --ielts-surface: #252a32;
+  background: #1f232a !important;
+}
+
+@media (max-width: 720px) {
+  .ielts-dashboard-home > center {
+    width: calc(100vw - 28px);
+    padding-top: 20px;
+  }
+
+  .ielts-dashboard__metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}

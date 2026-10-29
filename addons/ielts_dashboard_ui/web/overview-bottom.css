@@ -1,0 +1,33 @@
+body {
+  background: #f4f6f9 !important;
+}
+
+button {
+  min-height: 30px !important;
+  padding: 5px 12px !important;
+  border: 1px solid #dfe4eb !important;
+  border-radius: 6px !important;
+  background: #ffffff !important;
+  box-shadow: none !important;
+  color: #687284 !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+}
+
+button:hover {
+  border-color: #bdc7d5 !important;
+  background: #f8fafc !important;
+  color: #263246 !important;
+}
+
+.nightMode body,
+body.nightMode {
+  background: #1f232a !important;
+}
+
+.nightMode button,
+body.nightMode button {
+  border-color: #3d4654 !important;
+  background: #252a32 !important;
+  color: #a8b0be !important;
+}

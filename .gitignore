@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.DS_Store
+addons/1898790263/user_files/
+*.anki2
+*.anki21
+*.apkg
+*.colpkg
+*.zip

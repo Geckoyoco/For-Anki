@@ -8,4 +8,4 @@
 - [`addons/1898790263`](addons/1898790263)：Contanki 1.0.2 的本机源码副本，原项目 [roxgib/anki-contanki](https://github.com/roxgib/anki-contanki)，遵循目录内 AGPL-3.0 许可证。本机修改以当前文件为准。
 - [`scripts/package_anki_mac_2026-10-04.py`](scripts/package_anki_mac_2026-10-04.py)：旧迁移脚本留档，硬编码旧日期和本机路径，并依赖旧临时文件；**不可直接运行**。
 
-本仓库不含 Anki 集合、学习记录、媒体、登录凭据、迁移包及 Contanki 的 `user_files` 个人配置。Contanki 的 `buttons/` 图片资源也未上传；如需独立安装 Contanki，请从上游项目获取对应版本资源。任何新电脑安装或迁移都必须先核对目标环境，不能把本仓库当成完整迁移包。
+本仓库不含 Anki 集合、学习记录、卡片媒体、登录凭据、迁移包及 Contanki 的 `user_files` 个人配置。Contanki 的 `buttons/` 按钮图片和手柄示意图已包含。任何新电脑安装或迁移都必须先核对目标环境，不能把本仓库当成完整迁移包。

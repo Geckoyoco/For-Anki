@@ -1,0 +1,17 @@
+<div class="study-shell">
+  <div class="audio-row chinese-prompt">{{Chinese}}</div>
+  <div class="typing-area">{{type:English}}</div>
+</div>
+<script>
+(function () {
+  function focusAnswer() {
+    var input = document.getElementById("typeans");
+    if (!input || input.tagName !== "INPUT") return;
+    var active = document.activeElement;
+    if (active && active !== input && (active.tagName === "INPUT" || active.tagName === "TEXTAREA" || active.isContentEditable)) return;
+    try { input.focus({preventScroll: true}); } catch (e) { input.focus(); }
+  }
+  focusAnswer();
+  [50, 150, 300, 600].forEach(function (ms) { setTimeout(focusAnswer, ms); });
+})();
+</script>

@@ -1,0 +1,339 @@
+@font-face {
+  font-family: "XiaolaiLocal";
+  src: url("_xiaolai.ttf");
+}
+
+@font-face {
+  font-family: "ComicLocal";
+  src: url("_comic.ttf");
+}
+
+/* 页面渐变 */
+html {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+
+  background-color: #ffffff;
+  background-image: linear-gradient(
+    180deg,
+    #ede7f6 0%,
+    #ffffff 100%
+  );
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% 100vh;
+  background-attachment: fixed;
+
+  overflow-y: auto;
+  scrollbar-gutter: auto;
+}
+
+body,
+body.card {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  background: transparent !important;
+  overflow: visible;
+  scrollbar-gutter: auto;
+}
+
+/* 默认英文 Comic，中文回退到小赖 */
+.card {
+  width: min(800px, calc(100% - 64px));
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 42px 0 70px;
+  box-sizing: border-box;
+
+  color: #17151c;
+  background: transparent !important;
+
+  font-family:
+    "ComicLocal",
+    "Comic Sans MS",
+    "Comic Sans",
+    "XiaolaiLocal",
+    "PingFang SC",
+    sans-serif;
+
+  text-align: center;
+}
+
+body.card {
+  width: min(800px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 42px 0 70px;
+}
+
+/* 正背面顶部区域 */
+.study-shell {
+  display: grid;
+  width: 100%;
+  height: 265px;
+  box-sizing: border-box;
+  grid-template-rows: 65px 200px;
+}
+
+/* 音频 */
+.audio-row {
+  display: flex;
+  width: 100%;
+  height: 65px;
+  align-items: flex-start;
+  justify-content: center;
+
+  color: #6d6675;
+  font-size: 17px;
+}
+
+.audio-row .replay-button {
+  display: inline-flex !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.audio-row .replay-button svg {
+  width: 25px !important;
+  height: 25px !important;
+}
+
+/* 拼写区域 */
+.typing-area {
+  display: flex;
+  width: 100%;
+  height: 200px;
+  padding-top: 35px;
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: center;
+}
+
+/* 英文输入和拼写对比 */
+input#typeans,
+code#typeans,
+code#typeans * {
+  font-family:
+    "ComicLocal",
+    "Comic Sans MS",
+    "Comic Sans",
+    "XiaolaiLocal",
+    "PingFang SC",
+    sans-serif !important;
+
+  font-size: 30px !important;
+  font-weight: 500 !important;
+  line-height: 1.5 !important;
+  letter-spacing: 0 !important;
+}
+
+/* 正面输入框 */
+input#typeans {
+  display: block;
+  width: min(570px, calc(100% - 60px));
+  min-height: 52px;
+  margin: 0 auto !important;
+  padding: 7px 12px !important;
+  box-sizing: border-box;
+
+  border: 0 !important;
+  border-bottom: 2px solid rgba(91, 75, 126, 0.35) !important;
+  border-radius: 0 !important;
+  outline: none !important;
+  box-shadow: none !important;
+
+  color: #17151c !important;
+  background: transparent !important;
+  text-align: center !important;
+}
+
+input#typeans:focus {
+  border-bottom-color: #806baa !important;
+}
+
+/* 背面拼写对比 */
+code#typeans {
+  display: block !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+
+  border: 0 !important;
+  box-shadow: none !important;
+
+  color: #17151c !important;
+  background: transparent !important;
+  text-align: center !important;
+
+  white-space: pre !important;
+  overflow: visible !important;
+  font-variant-ligatures: none !important;
+}
+
+/* 向下箭头 */
+#typearrow {
+  display: inline-block;
+  margin: 6px 0;
+
+  color: #38323f !important;
+  background: transparent !important;
+
+  font-family: Arial, sans-serif !important;
+  font-size: 31px !important;
+  font-weight: 400 !important;
+  line-height: 1.2 !important;
+}
+
+/* 正确字符 */
+.typeGood {
+  padding: 2px 3px !important;
+  border-radius: 3px;
+  color: #126b48 !important;
+  background: rgba(55, 163, 115, 0.14) !important;
+}
+
+/* 错误字符 */
+.typeBad {
+  padding: 2px 3px !important;
+  border-radius: 3px;
+  color: #b31632 !important;
+  background: rgba(225, 66, 91, 0.17) !important;
+}
+
+/* 遗漏字符 */
+.typeMissed {
+  padding: 2px 3px !important;
+  border-radius: 3px;
+  color: #936016 !important;
+  background: rgba(229, 165, 63, 0.19) !important;
+}
+
+/* 分隔线 */
+hr#answer {
+  width: 100%;
+  margin: 8px 0 30px;
+  border: 0;
+  border-top: 1px solid rgba(53, 47, 63, 0.18);
+}
+
+/* 背面内容 */
+.answer-details {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* 英文答案 */
+.answer-english {
+  color: #17151c;
+
+  font-family:
+    "ComicLocal",
+    "Comic Sans MS",
+    "Comic Sans",
+    "XiaolaiLocal",
+    cursive;
+
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+/* 中文释义 */
+.answer-chinese {
+  margin-top: 14px;
+  color: #625b6b;
+
+  font-family:
+    "XiaolaiLocal",
+    "小赖字体",
+    "PingFang SC",
+    "Microsoft YaHei",
+    sans-serif;
+
+  font-size: 21px;
+  font-weight: 450;
+  line-height: 1.65;
+}
+
+/* 标签 */
+.hint {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 5px 12px;
+
+  border: 1px solid rgba(83, 73, 103, 0.14);
+  border-radius: 5px;
+
+  color: #777080;
+  background: rgba(255, 255, 255, 0.38);
+
+  font-family:
+    "ComicLocal",
+    "Comic Sans MS",
+    "Comic Sans",
+    "XiaolaiLocal",
+    "PingFang SC",
+    sans-serif;
+
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* 完全正确时的确认区域 */
+.correct-confirmation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.correct-arrow {
+  display: block;
+  margin: 0 0 10px;
+
+  font-family: Arial, sans-serif;
+  font-size: 42px;
+  line-height: 1;
+
+  color: #111111 !important;
+  -webkit-text-fill-color: #111111 !important;
+}
+
+.correct-answer {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 5px;
+
+  font-family:
+    "ComicLocal",
+    "Comic Sans MS",
+    "Comic Sans",
+    "XiaolaiLocal",
+    cursive;
+
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.35;
+
+  color: #006b4f !important;
+  -webkit-text-fill-color: #006b4f !important;
+  background: rgba(38, 139, 104, 0.12);
+}
+
+/* 中文提示：保持听写卡的拼写输入视觉 */
+.chinese-prompt {
+  align-items: center;
+  color: #17151c;
+  font-family: "XiaolaiLocal", "PingFang SC", sans-serif;
+  font-size: 23px;
+  line-height: 1.5;
+}

@@ -1,0 +1,47 @@
+{{FrontSide}}
+
+<!-- 用于读取标准答案，不直接显示 -->
+<div id="expected-answer" hidden>{{text:English}}</div>
+
+<script>
+(function () {
+    const typeAnswer = document.getElementById("typeans");
+    const expected = document.getElementById("expected-answer");
+
+    if (!typeAnswer || !expected) return;
+
+    /* 写错时 Anki 自带箭头，不重复处理 */
+    const nativeArrow =
+        typeAnswer.querySelector("#typearrow") ||
+        document.getElementById("typearrow");
+
+    if (nativeArrow) return;
+
+    /* 写对时补充箭头和完整正确答案 */
+    const confirmation = document.createElement("span");
+    confirmation.className = "correct-confirmation";
+
+    const arrow = document.createElement("span");
+    arrow.className = "correct-arrow";
+    arrow.textContent = "↓";
+
+    const answer = document.createElement("span");
+    answer.className = "correct-answer";
+    answer.textContent = expected.textContent.trim();
+
+    confirmation.appendChild(arrow);
+    confirmation.appendChild(answer);
+    typeAnswer.appendChild(confirmation);
+})();
+</script>
+
+<hr id="answer">
+
+<div class="answer-details">
+    <div class="answer-english">{{English}}</div>
+    <div class="answer-chinese">{{Chinese}}</div>
+
+    {{#Tags}}
+    <div class="hint">{{Tags}}</div>
+    {{/Tags}}
+</div>
